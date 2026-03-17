@@ -49,35 +49,27 @@ Instead of relying on one model, multiple specialized agents analyze the problem
 
 ---
 
-# System Architecture
+## System Architecture
 
-The pipeline of the system is illustrated below.
+```mermaid
+flowchart TD
 
+A[Ticker Input] --> B[Company Financial Data]
+A --> C[Macroeconomic Data (FRED)]
+
+B --> D[DCF Agent]
+B --> E[Risk Agent]
+C --> F[Macro Agent]
+
+D --> G[Consensus Engine]
+E --> G
+F --> G
+
+G --> H[Stability Testing]
+H --> I[Final Intrinsic Valuation]
+
+I --> J[Market Comparison]
 ```
-Ticker Input
-      ↓
-Company Financial Data Collection
-      ↓
-Macroeconomic Data Collection
-      ↓
-Multi-Agent Analysis
-   /       |       \
-DCF     Risk     Macro
-   \       |       /
-   Consensus Engine
-         ↓
-  Stability Testing
-         ↓
-   Intrinsic Value
-```
-
-A visual diagram is available in:
-
-```
-docs/architecture.png
-```
-
----
 
 # Agents
 
