@@ -1,18 +1,3 @@
-Here is your **final polished GitHub README** with everything included:
-
-* clear explanation
-* architecture
-* key features
-* project structure
-* demo
-* installation
-* research context
-* disclaimer
-
-You can **copy-paste this directly into `README.md`**.
-
----
-
 # Multi-Agent AI System for Intrinsic Company Valuation
 
 ## Overview
